@@ -421,91 +421,142 @@ textarea.form-control {
 
 /* Footer */
 .footer {
-    background-color: #222;
-    color: white;
-    padding: 50px 0 20px;
+    background: linear-gradient(135deg, #2c3e50, #1a252f);
+    color: #ffffff;
+    padding: 40px 0;
+    border-top: 4px solid #3498db;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
     text-align: center;
 }
 
+/* Iconos sociales superiores */
 .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
     margin-bottom: 30px;
 }
 
 .social-icons a {
+    font-size: 24px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
     display: inline-block;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    background-color: #333;
-    color: white;
-    border-radius: 50%;
-    margin: 0 5px;
-    transition: all 0.3s ease;
 }
 
 .social-icons a:hover {
-    background-color: #3498db;
     transform: translateY(-5px);
+    color: #3498db;
 }
 
-.socials{
+/* Contenedor flex para las redes sociales */
+.flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* Estilo para cada red social */
+.socials {
     display: flex;
     align-items: center;
+    margin: 10px;
+    transition: transform 0.3s ease;
 }
-.socials a{
-    color: white;
+
+.socials:hover {
+    transform: translateY(-3px);
 }
+
 .socials-networks {
-    color: white;
-    background-color: rgb(10, 4, 4);
-    width: 35px;
-    height: 35px;
-    position: relative;
-    border-radius: 50px;
-    margin-right: 10px;
-}
-.socials-networks  a{
-    color: white;
-    text-decoration: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-.instagram{
-    color: white;
-    background-color: rgb(212, 0, 255);
-    width: 35px;
-    height: 35px;
-    position: relative;
-    border-radius: 5px;
-    margin-right: 10px;
-}
-.youtube{
-    color: white;
-    background-color: rgb(255, 0, 0);
-    width: 35x;
-    height: 35px;
-    position: relative;
-    border-radius: 3px;
-    margin-right: 10px;
-}
-.flex{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
 }
+
+.tiktok {
+    background-color: #000000;
+}
+
+.youtube {
+    background-color: #FF0000;
+}
+
+.instagram {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+}
+
+.solcial_icon {
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    font-size: 18px;
+}
+
+.link_social {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.link_social:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+/* Texto del footer */
 .footer-text {
-    margin: 30px 0  ;
+    margin: 25px 0;
+    font-size: 16px;
+    color: #ecf0f1;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* Copyright */
 .copyright {
-    padding-top: 20px;
-    border-top: 1px solid #444;
-    font-size: 0.9rem;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #bdc3c7;
 }
 
+/* Animación sutil de brillo */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(52, 152, 219, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0); }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .flex {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .socials {
+        margin: 5px;
+    }
+    
+    .footer-text {
+        font-size: 14px;
+    }
+}
 /* Animación al hacer scroll */
 .fade-in {
     opacity: 0;
@@ -569,6 +620,6 @@ textarea.form-control {
     }
 
     section {
-        padding: 60px 0;
+        padding: 50px 0;
     }
 }
